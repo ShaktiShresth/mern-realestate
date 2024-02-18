@@ -295,7 +295,9 @@ const Profile = () => {
 
               <div className="flex item-center gap-2">
                 <button className="text-green-700 hover:opacity-70">
-                  <MdEditNote className="w-6 h-6" title="Edit Listing" />
+                  <Link to={`/update-listing/${listing._id}`}>
+                    <MdEditNote className="w-6 h-6" title="Edit Listing" />
+                  </Link>
                 </button>
                 <button className="text-red-700 hover:opacity-70">
                   <MdDelete
