@@ -4,8 +4,11 @@ import { PropTypes } from "prop-types";
 
 const ListingItem = ({ listing }) => {
   return (
-    <div className="bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]">
+    <div className="relative bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]">
       <Link to={`/listing/${listing._id}`}>
+        <span className="absolute right-2 top-2 bg-slate-500 text-white px-3 py-1 rounded-lg uppercase text-xs font-semibold z-10">
+          {listing.type}
+        </span>
         <img
           src={
             listing.imageUrls[0] ||
